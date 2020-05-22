@@ -4,36 +4,28 @@ import javax.swing.*;
 
 public class WindowLabyrinth {
 	
-	
-	public void msg(ImageIcon icon) {
-		JOptionPane.showMessageDialog(null, icon); //sends a message to the user
-	}
-	
 	public String in(String msg) {
-		return JOptionPane.showInputDialog(msg);
+		return JOptionPane.showInputDialog(msg); //shows the user a jpane and asks them to enter a response
 	}
 	
 	public void println(String msg) {
-		System.out.println(msg);
+		System.out.println(msg); //prints out a msg
 	}
 	
+	//show the string 2d array/maze, along with the buttons and the level number as a jpane
 	public int option1(String[] options, String map, int lvl) {
 		return JOptionPane.showOptionDialog(null, map, "Level " + lvl, JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
 	}
 	
 	public void msg1(String s) {
-		JOptionPane.showMessageDialog(null, s);
+		JOptionPane.showMessageDialog(null, s); //shows the user a jpane message
 		
 	}
 
 	public void msg2(String[][] strings) {
-		JOptionPane.showMessageDialog(null, strings);
+		JOptionPane.showMessageDialog(null, strings); //shows the user a 2d string array
 		
 	}
 
-	public int option(String[] replay, String string) {
-		// TODO Auto-generated method stub
-		return JOptionPane.showOptionDialog(null, string, "Replay", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, replay, replay[0]);
-	}
 
 }
