@@ -3,6 +3,7 @@ package maze2;
 import java.util.ArrayList;
 
 public class LabDesign {
+	//instance variables
 	private boolean[][] _lab;
 	private boolean[][] _lab2;
 	private boolean[][] _lab3;
@@ -11,6 +12,7 @@ public class LabDesign {
 	public static final LabPosition end = new LabPosition(8, 10);
 	private ArrayList<boolean[][]> list = new ArrayList<>();
 	
+	//returns a position where a question can spawn
 	public LabPosition getQPos() {
 		int x = (int) (Math.random() * 12);
 		int[] row = {7, 3, 3, 1, 1, 6, 6, 9, 9, 3, 7, 5};
@@ -18,6 +20,9 @@ public class LabDesign {
 		return new LabPosition(row[x], col[x]);
 	}
 	
+	//constructor
+	//contains the designs for all 5 mazes, in the form of 2d boolean arrays, to be converted to string later
+	//also adds them to an arraylist of 2d boolean arrays
 	public LabDesign() {
 		//true = wall
 		//false = space
@@ -88,6 +93,7 @@ public class LabDesign {
 		}
 	
 	
+	//getter methods
 	public boolean[][] getLab(int x) { return list.get(x); }
 	
 	public LabPosition getEnd() { return end; }
