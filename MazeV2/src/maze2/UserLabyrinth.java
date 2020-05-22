@@ -3,6 +3,7 @@ package maze2;
 import javax.swing.*;
 
 public class UserLabyrinth {
+	//instance variables
 	private WindowLabyrinth _w;
 	private LabDesign _l;
 	private LabDesign _l2;
@@ -22,6 +23,8 @@ public class UserLabyrinth {
 	
 	public static final String[] BUTTONS = {"North", "South", "West", "East", "Help", "Exit"};
 	
+	//constructor
+	//contains the game mechanics, step by step, and what the player sees while they're playing
 	public UserLabyrinth() {
 		_w = new WindowLabyrinth();
 		_l = new LabDesign();
@@ -180,6 +183,7 @@ public class UserLabyrinth {
 		}
 	}
 	
+	//checks if two positions are the same and returns a boolean response
 	public boolean checkEqual(LabPosition x, LabPosition y) {
 		if ((x.getRow() == y.getRow()) && (x.getCol() == y.getCol())) {
 			return true;
@@ -188,6 +192,7 @@ public class UserLabyrinth {
 		}
 	}
 	
+	//asks the user a question if they are standing in a question position, and checks if they're answer is correct or not compared to the real answer
 	public void askQuestion() {
 		String question;
 		String answer;
@@ -262,6 +267,7 @@ public class UserLabyrinth {
 		}
 	}
 	
+	//shows extra jpanes with messages to add to the game's story
 	public void whispers() {
 		LabPosition a = new LabPosition(7, 3);
 		LabPosition b = new LabPosition(4, 1);
