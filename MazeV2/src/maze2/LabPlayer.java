@@ -1,14 +1,20 @@
 package maze2;
 
 public class LabPlayer {
+	//instance variables
 	private int _r;
 	private int _c;
 	private LabPosition _curPos;
 	
+	//constructor
+	//starts the player at the position (0, 1)
 	public LabPlayer() {
 		_curPos = new LabPosition(0, 1);
 	}
 	
+	//moves the player based on what button the user presses
+	//also blocks them from walking into a wall
+	//includes message for "help" button and closes the program for "exit"
 	public LabPosition move(LabDesign l, int x, int buttons, WindowLabyrinth w) {
 		if (buttons == 0) {
 			if (l.getLab(x)[_curPos.getRow()-1][_curPos.getCol()]) {
@@ -54,10 +60,11 @@ public class LabPlayer {
 		return _curPos;
 	}
 	
-	public LabPosition getPos() { return _curPos; }
-	
+	//puts the player at the start position
 	public void startPos() { _curPos = new LabPosition(0, 1); }
 	
+	//getter methods
+	public LabPosition getPos() { return _curPos; }
 	public int getRow() { return _r; }
 	public int getCol() { return _c; }
 }
