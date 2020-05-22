@@ -1,11 +1,15 @@
 package maze2;
 
 public class LabString {
+	//instance variables
 	private String _s = "";
-	private boolean[][] _l = new boolean[11][11]; 
+	private boolean[][] _l = new boolean[11][11];
+	//constructor
 	public LabString() {
 		
 	}
+	
+	//uses the labdesign 2d boolean arrays and updates it every move to represent the entities in the maze correctly as a string
 	public String updateLab(LabDesign l, int x, LabPlayer p, LabQuestion q1, 
 			LabQuestion q2, LabQuestion q3, LabQuestion q4, LabQuestion q5, LabQuestion q6, 
 			LabMinotaur m, LabRat rat) {
